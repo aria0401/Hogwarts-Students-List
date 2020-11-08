@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,400;0,500;0,600;1,200&family=Yeseva+One&display=swap" rel="stylesheet" />
+    <title>Hacked Hogwarts Students List</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div><img class="icon" data-action="filter" data-filter="Gryffindor" src="graphics/Gryffindor.svg" alt="icon" /></div>
+        <div><img class="icon" data-action="filter" data-filter="Hufflepuff" src="graphics/Hufflepuff.svg" alt="icon" /></div>
+        <div><img class="icon_hogwarts" data-action="filter" data-filter="Hogwarts" src="graphics/hogwarts.svg" alt="icon" /></div>
+        <div><img class="icon" data-action="filter" data-filter="Ravenclaw" src="graphics/Ravenclaw.svg" alt="icon" /></div>
+        <div><img class="icon" data-action="filter" data-filter="Slytherin" src="graphics/Slytherin.svg" alt="icon" /></div>
+        <!-- <div><img class="icon" data-action="filter" data-filter="expelled" src="graphics/expelled.svg" alt="icon" /></div> -->
+      </nav>
+    </header>
+    <div><img class="icon_footer" data-action="filter" data-filter="expelled" src="graphics/expelled.svg" alt="icon" /></div>
+    <section>
+      <main>
+        <table id="list">
+          <thead>
+            <tr id="sorting">
+              <th data-action="sort" data-sort-direction="asc" data-sort="firstName">Photo</th>
+              <th data-action="sort" data-sort-direction="asc" data-sort="firstName">First Name</th>
+
+              <th data-action="sort" data-sort-direction="asc" data-sort="lastName">Last Name</th>
+              <th data-action="sort" data-sort-direction="asc" data-sort="house">House</th>
+              <th>
+                <img data-sort-direction="asc" id="squad_img" src="graphics/inq_squad.svg" data-status="img_status" alt="" />
+              </th>
+              <!-- <th>
+                <img data-sort-direction="asc" src="graphics/vara2.svg" data-status="img_status" alt="" />
+              </th> -->
+              <th data-sort-direction="asc" data-status="status">Expel Student</th>
+
+              <th>
+                <img data-sort-direction="asc" id="prefect_img" src="graphics/prefects.svg" data-status="img_status" alt="" />
+              </th>
+          
+              <!-- <th>
+                <img data-sort-direction="asc" src="graphics/half2.svg" data-status="img_status" alt="" />
+              </th> -->
+              <th data-sort-direction="asc" data-status="status">Blood Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- student template will be copied and inserted here -->
+          </tbody>
+        </table>
+      </main>
+
+      <article class="details">
+        <div class="button textColor">✗</div>
+        <div class="info">
+          <div class="top">
+            <div class="col col2">
+              <img class="studentImage" src="" alt="" />
+            </div>
+            <div class="col col1">
+              <p class="student"></p>
+              <p class="prefect_txt"></p>
+              <p class="squad_txt"></p>
+              <img src="" alt="" class="blood" />
+            </div>
+          </div>
+          <div class="bottom">
+            <img src="" alt="" class="house_img" />
+            <!-- <img src="" alt="" class="blood" /> -->
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <template id="student">
+      <tr>
+        <td>
+          <img class="foto" src="" data-field="image" data-img="img" alt="" />
+        </td>
+        <td><p data-field="firstName">First Name</p></td>
+        <td><p data-field="lastName">Last Name</p></td>
+        <td><p data-field="house">House</p></td>
+
+        <td>
+          <img src="graphics/inq_squad.svg" data-status="img_status" data-img="img_squad" alt="" />
+        </td>
+
+        <td>
+          <img src="graphics/vara2.svg" data-status="img_status" data-img="img_expelled" alt="" />
+        </td>
+
+        <td>
+          <img src="graphics/prefects.svg" data-status="img_status" data-img="img_prefect" alt="" />
+        </td>
+        <td>
+          <img src="graphics/half.svg" data-status="img_status" data-img="img_blood" alt="" />
+        </td>
+      </tr>
+    </template>
+
+    <div id="message_prefect" class="message_prefect">
+      <div class="dialog">
+        <p>There can only be one prefect of this gender in the House</p>
+        <button class="remove_button">Remove the other</button>
+        <button class="ignore_button">Ignore</button>
+      </div>
+    </div>
+
+    <div id="message_squad" class="message_squad">
+      <div class="dialog">
+        <button class="close_button_squad">✗</button>
+        <p>
+          Only students with pure blood can be members <br />
+          of the Inquisitorial Squad
+        </p>
+      </div>
+    </div>
+
+    <div id="sounds">
+      <audio src="" id="gul_bil_rafa"></audio>
+      <audio src="audio/Oh_nej.m4a" class="oh_nej_migu"></audio>
+    </div>
+
+    <footer>
+      <p></p>
+      <p>Inquisitorial Squad:</p>
+      <p>Expelled students:</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
